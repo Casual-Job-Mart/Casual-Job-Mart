@@ -1,7 +1,7 @@
 # Casual-Job-Mart
 ## Designed by: 
-## Rui Wu
-## Zhengyang Li
+Rui Wu <br />
+Zhengyang Li
 
 ## IDEA
 ### Log-in and sign-up method:
