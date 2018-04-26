@@ -1,7 +1,7 @@
 package com.company.casual_job_mart.casualJobMart
 
-class User constructor(idNumber: Int){
-    private var id: Int = idNumber
+class User{
+    private var id: Int = 0
     private var phone: String? = null
     private var email: String? = null
     private var lastName: String? = null

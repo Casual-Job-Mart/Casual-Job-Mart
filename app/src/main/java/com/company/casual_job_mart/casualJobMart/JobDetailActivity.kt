@@ -3,7 +3,7 @@ package com.company.casual_job_mart.casualJobMart
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class JobDetail : AppCompatActivity() {
+class JobDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

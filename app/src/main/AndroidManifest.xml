@@ -20,10 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LogIn" />
-        <activity android:name=".JobPosting" />
-        <activity android:name=".JobDetail" />
-        <activity android:name=".JobOwnerMain"></activity>
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".JobPostingActivity" />
+        <activity android:name=".JobDetailActivity" />
+        <activity android:name=".JobOwnerMainActivity"></activity>
     </application>
 
 </manifest>
