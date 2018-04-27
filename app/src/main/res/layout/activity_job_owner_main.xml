@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.company.casual_job_mart.casualJobMart.com.company.casual_job_mart.casual_job_mart.JobOwnerMain">
+    tools:context="com.company.casual_job_mart.casualJobMart.JobOwnerMainActivity">
 
 </android.support.constraint.ConstraintLayout>

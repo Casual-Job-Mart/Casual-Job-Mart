@@ -13,17 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.company.casual_job_mart.casualJobMart.com.company.casual_job_mart.casualJobMart.MainActivity">
+        <activity android:name="com.company.casual_job_mart.casualJobMart.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.company.casual_job_mart.casualJobMart.com.company.casual_job_mart.casualJobMart.LogIn" />
-        <activity android:name="com.company.casual_job_mart.casualJobMart.com.company.casual_job_mart.casualJobMart.JobPosting" />
-        <activity android:name="com.company.casual_job_mart.casualJobMart.com.company.casual_job_mart.casualJobMart.JobDetail" />
-        <activity android:name="com.company.casual_job_mart.casualJobMart.JobOwnerMain"></activity>
+
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".JobPostingActivity" />
+        <activity android:name=".JobDetailActivity" />
+        <activity android:name=".JobOwnerMainActivity"></activity>
     </application>
 
 </manifest>

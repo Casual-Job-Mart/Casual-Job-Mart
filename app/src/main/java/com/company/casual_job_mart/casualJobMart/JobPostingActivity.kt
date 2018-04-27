@@ -9,7 +9,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.support.v4.app.ActivityCompat
 
-class JobPosting : AppCompatActivity() {
+class JobPostingActivity : AppCompatActivity() {
 
     var MY_REQUEST_CAMERA: Int = 8000
     var MY_REQUEST_READ_STORAGE: Int = 8001
