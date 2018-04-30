@@ -2,10 +2,12 @@ package com.company.casual_job_mart.casualJobMart
 
 class User{
     private var id: Int = 0
-    private var phone: String? = null
-    private var email: String? = null
-    private var lastName: String? = null
-    private var firstName: String? = null
+    private var phone:String = String()
+    private var email:String = String()
+    private var lastName:String = String()
+    private var firstName:String = String()
+    private var worker:Worker? = null
+    private var owner:Owner? = null
 
     public fun getID():Int {
         return this.id
