@@ -11,6 +11,10 @@ class Worker (idNumber:Int){
     private var jobHistory:MutableList<Job> = ArrayList()
     private var savedJobs:MutableList<Pair<Int,Job>> = ArrayList()
 
+    public fun getID():Int{
+        return this.id
+    }
+
     public fun calculateRating(newRating:Float){
         this.rating = ((rating * ratingCount) + newRating)/ (ratingCount +1)
         increaseRatingCount()
