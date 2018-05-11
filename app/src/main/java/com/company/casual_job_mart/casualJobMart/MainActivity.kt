@@ -11,10 +11,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        /*
         buttonTest = findViewById(R.id.testButton)
         buttonTest.setOnClickListener{
             loadDatabase()
-        }
+        }*/
     }
 
     //Testing
