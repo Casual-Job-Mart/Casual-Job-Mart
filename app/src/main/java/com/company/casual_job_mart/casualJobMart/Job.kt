@@ -3,25 +3,13 @@ package com.company.casual_job_mart.casualJobMart
 import android.graphics.Picture
 import java.util.*
 
-class Job (ownerID:String,jobName:String="",startOn:Date=Date(),endOn:Date=Date(),quote:Float=0F,pic:Picture=Picture(),discpt:String=String()){
-    private var id:Int = -1
-    private var name:String = jobName
-    private var ownerID:String = ownerID
-    private var startTime: Date = startOn
-    private var endTime:Date = endOn
-    private var quotation:Float = quote
-    private var picture:Picture = pic
-    private var discription:String = discpt
-    private var status:String = "Draft"
-    private var isActivity:Boolean = false
+class Job (val jobID:String,var ownerID:String,var jobName:String="",var startTime:String=String(),var endTime:String=String(),var quotation:Float=0F,var picure:Picture=Picture(),var discription:String=String()){
 
-    init{
-        loadDatabase()
-    }
+    public var status:String = "Draft"
 
-    /*
-    public fun getID():Int{
-        return this.id
+/*
+    public fun getID():String{
+        return this.jobID
     }
 
     public fun getName():String{
@@ -30,9 +18,9 @@ class Job (ownerID:String,jobName:String="",startOn:Date=Date(),endOn:Date=Date(
 
     public fun getOwnerID():String{
         return this.ownerID
-    }*/
+    }
 
-    /*
+
     public fun setName(jobName:String){
         this.name = jobName
     }
@@ -48,14 +36,9 @@ class Job (ownerID:String,jobName:String="",startOn:Date=Date(),endOn:Date=Date(
 
     public fun setQuotation(quote:Float){
         this.quotation = quote
-    }*/
-
-
-
-    public fun loadDatabase(){
-
     }
 
+*/
 
 
 

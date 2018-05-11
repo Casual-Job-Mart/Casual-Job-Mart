@@ -9,7 +9,7 @@ class Owner (idNumber:Int){
     }
 
     public fun addNewJob(job:Job){
-        jobList.add(Pair(job.getID(),job))
+        //jobList.add(Pair(job.getID(),job))
     }
 
     public fun getJobList():List<Pair<Int,Job>>{

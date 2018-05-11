@@ -45,7 +45,7 @@ class Worker (idNumber:Int){
     }
 
     public fun addSavedJobs(job:Job){
-        this.savedJobs.add(Pair(job.getID(),job))
+        //this.savedJobs.add(Pair(job.getID(),job))
     }
 
     public fun removeSavedJob(jobID:Int){

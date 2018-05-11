@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.company.casual_job_mart.casualJobMart.MainActivity">
 
+    <Button
+        android:id="@+id/testButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TestDatabase"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="101dp" />
 </android.support.constraint.ConstraintLayout>
