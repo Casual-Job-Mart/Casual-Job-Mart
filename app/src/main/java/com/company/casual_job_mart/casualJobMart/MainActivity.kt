@@ -1,13 +1,8 @@
 package com.company.casual_job_mart.casualJobMart
 
-import android.graphics.Picture
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
-import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
     //private var workerList: MutableList<Worker> = ArrayList()
@@ -25,14 +20,14 @@ class MainActivity : AppCompatActivity() {
     //Testing
 
     private fun loadDatabase(){
-        val ref = FirebaseDatabase.getInstance().getReference("jobs")
-        val jobID = ref.push().key
+        val jobID = dbManager().pushJob()
+
         val startTime = "2018-05-01 0800"
         val endTime = "2018-05-01 1630"
+
         val job = Job(jobID,"test123","ABC Sample Job",startTime,endTime,100.00F, discription = "Test job want nice workers!")
-        print(jobID)
-        ref.child(jobID).setValue(job)
-        ref.child(jobID).child("status").setValue("Active")
+
+        val status = dbManager().updateJob(job)
     }
 
 

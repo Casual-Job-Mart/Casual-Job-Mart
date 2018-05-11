@@ -3,21 +3,20 @@ package com.company.casual_job_mart.casualJobMart
 import android.graphics.Picture
 import java.util.*
 
-class Job (val jobID:String,var ownerID:String,var jobName:String="",var startTime:String=String(),var endTime:String=String(),var quotation:Float=0F,var picure:Picture=Picture(),var discription:String=String()){
+class Job (val jobID:String,var ownerID:String,var jobName:String="",var startTime:String=String(),var endTime:String=String(),var quotation:Float=0F,var picure:Picture=Picture(),var discription:String=String(),var status:String = "Draft"){
 
-    public var status:String = "Draft"
 
-/*
+
     public fun getID():String{
         return this.jobID
     }
 
+    public fun getOwner():String{
+        return this.ownerID
+    }
+/*
     public fun getName():String{
         return this.name
-    }
-
-    public fun getOwnerID():String{
-        return this.ownerID
     }
 
 

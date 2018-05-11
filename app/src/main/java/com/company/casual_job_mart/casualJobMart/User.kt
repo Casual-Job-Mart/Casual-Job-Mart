@@ -1,14 +1,11 @@
 package com.company.casual_job_mart.casualJobMart
 
-class User{
-    private var id: Int = 0
-    private var phone:String = String()
-    private var email:String = String()
-    private var lastName:String = String()
-    private var firstName:String = String()
-    private var worker:Worker? = null
-    private var owner:Owner? = null
+class User(val id:String,var phone:String=String(),var email:String=String(),var lastName:String=String(),var firstName:String = String()){
 
+    public var worker:Worker? = Worker(this.id)
+    public var owner:Owner? = Owner(this.id)
+
+    /*
     public fun getID():Int {
         return this.id
     }
@@ -45,4 +42,5 @@ class User{
     public fun getFirstName():String?{
         return this.firstName
     }
+    */
 }

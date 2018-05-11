@@ -2,16 +2,16 @@ package com.company.casual_job_mart.casualJobMart
 
 import java.util.*
 
-class Worker (idNumber:Int){
+class Worker (idNumber:String){
 
-    private var id:Int = idNumber
+    private var id:String = idNumber
     private var rating:Float = 0F
     private var ratingCount:Int = 0
     private var reviewList:MutableList<Pair<Date,String>> = ArrayList()
     private var jobHistory:MutableList<Job> = ArrayList()
     private var savedJobs:MutableList<Pair<Int,Job>> = ArrayList()
 
-    public fun getID():Int{
+    public fun getID():String{
         return this.id
     }
 
