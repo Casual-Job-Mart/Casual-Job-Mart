@@ -4,15 +4,27 @@ import com.google.firebase.database.FirebaseDatabase
 
 class dbManager {
     val jobs = FirebaseDatabase.getInstance().getReference("jobs")
-    val owners = FirebaseDatabase.getInstance().getReference("owners")
+    val users = FirebaseDatabase.getInstance().getReference("users")
+
     fun pushJob():String{
-        val jobID = jobs.push().key
-        return jobID
+        return jobs.push().key
     }
 
-    public fun updateJob(job:Job):Boolean{
+    fun updateJob(job:Job):Boolean{
         var status = false
         jobs.child(job.jobID).setValue(job).addOnCompleteListener{
+            status = true
+        }
+        return status
+    }
+
+    fun pushUser():String{
+        return users.push().key
+    }
+
+    fun updateUser(user:User):Boolean{
+        var status = false
+        users.child(user.id).setValue(user).addOnCompleteListener{
             status = true
         }
         return status

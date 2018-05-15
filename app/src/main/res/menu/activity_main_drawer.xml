@@ -5,6 +5,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_search_job"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Search Job" />
+        <item
             android:id="@+id/nav_job_saved"
             android:icon="@drawable/ic_menu_camera"
             android:title="First Layout" />
@@ -12,6 +16,11 @@
             android:id="@+id/nav_message"
             android:icon="@drawable/ic_menu_send"
             android:title="Message" />
+        <item
+            android:id="@+id/nav_test"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Test" />
+
     </group>
 
     <item android:title="Job Owners">

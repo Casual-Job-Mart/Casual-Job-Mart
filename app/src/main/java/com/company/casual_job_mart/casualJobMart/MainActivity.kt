@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
+        /*
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
-        }
+        }*/
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+        fragmentManager.beginTransaction().replace(R.id.content_frame,TestFragment()).commit()
     }
 
     override fun onBackPressed() {
@@ -59,11 +60,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
+            R.id.nav_search_job -> {
+                fragmentManager.beginTransaction().replace(R.id.content_frame,SearchJobFragment()).commit()
+            }
             R.id.nav_job_saved -> {
                 fragmentManager.beginTransaction().replace(R.id.content_frame,JobSavedFragment()).commit()
             }
             R.id.nav_message -> {
                 fragmentManager.beginTransaction().replace(R.id.content_frame,MessageFragment()).commit()
+            }
+            R.id.nav_test -> {
+                fragmentManager.beginTransaction().replace(R.id.content_frame,TestFragment()).commit()
             }
             R.id.nav_share -> {
 
