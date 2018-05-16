@@ -18,29 +18,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LogInActivity" />
-        <activity android:name=".JobPostingActivity" />
-        <activity android:name=".JobDetailActivity" />
-        <activity android:name=".JobOwnerMainActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity
-            android:name="com.company.casual_job_mart.casual_job_mart.MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.company.casual_job_mart.casual_job_mart.loginActivity"
-            android:label="@string/title_activity_login" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
-        <activity android:name=".MessageActivity" />
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
