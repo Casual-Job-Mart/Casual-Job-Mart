@@ -9,10 +9,15 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.nav_header_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    private val mAuth = FirebaseAuth.getInstance();
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +36,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         nav_view.setNavigationItemSelectedListener(this)
         fragmentManager.beginTransaction().replace(R.id.content_frame,TestFragment()).commit()
+
+        if(mAuth.currentUser == null){
+//            var usernameTextView:TextView
+//            usernameTextView = findViewById(R.id.navHeaderMainUsernameTextView)
+//            usernameTextView.text = "You hadn't login yet"
+        }
     }
 
     override fun onBackPressed() {
@@ -63,8 +74,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_search_job -> {
                 fragmentManager.beginTransaction().replace(R.id.content_frame,SearchJobFragment()).commit()
             }
-            R.id.nav_job_saved -> {
-                fragmentManager.beginTransaction().replace(R.id.content_frame,JobSavedFragment()).commit()
+            R.id.nav_login -> {
+                fragmentManager.beginTransaction().replace(R.id.content_frame, LogInFragment()).commit()
             }
             R.id.nav_message -> {
                 fragmentManager.beginTransaction().replace(R.id.content_frame,MessageFragment()).commit()
