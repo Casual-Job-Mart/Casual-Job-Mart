@@ -2,7 +2,7 @@ package com.company.casual_job_mart.casualJobMart
 
 import com.google.firebase.database.FirebaseDatabase
 
-class dbManager {
+class DbManager {
     val jobs = FirebaseDatabase.getInstance().getReference("jobs")
     val users = FirebaseDatabase.getInstance().getReference("users")
 

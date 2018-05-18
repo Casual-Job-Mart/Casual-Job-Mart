@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewPlace1"
         android:layout_centerHorizontal="true"
-        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:drawableLeft="@drawable/ic_baseline_place_24px"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="18sp" />

@@ -45,22 +45,22 @@ class TestFragment : Fragment() {
                 }
             }
 
-        });
+        })
         return myView
     }
 
     fun testPushUser(){
-        val userID = dbManager().pushUser()
+        val userID = DbManager().pushUser()
         val user = User(userID,"7808503263","abc@test.com","Stark","Tony")
-        dbManager().updateUser(user).toString()
+        DbManager().updateUser(user).toString()
     }
 
     fun testPushJob(){
-        val jobID = dbManager().pushJob()
+        val jobID = DbManager().pushJob()
         val startTime = "2018-05-01 0800"
         val endTime = "2018-05-01 1630"
-        val job = Job(jobID,"test123","ABC Sample Job",startTime,endTime,100.00F, discription = "Test job want nice workers!")
-        dbManager().updateJob(job)
+        val job = Job(jobID,"test123","abc Sample Job",startTime,endTime,100.00F, discription = "Test job want nice workers!")
+        DbManager().updateJob(job)
     }
 
 
