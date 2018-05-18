@@ -20,10 +20,6 @@
             android:id="@+id/nav_test"
             android:icon="@drawable/ic_menu_send"
             android:title="Test" />
-        <item
-            android:id="@+id/nav_login"
-            android:icon="@drawable/ic_menu_send"
-            android:title="Login" />
 
     </group>
 

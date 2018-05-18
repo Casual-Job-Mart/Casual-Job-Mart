@@ -85,8 +85,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_search_job -> {
                 fragmentManager.beginTransaction().replace(R.id.content_frame,SearchJobFragment()).commit()
             }
-            R.id.nav_login -> {
-                fragmentManager.beginTransaction().replace(R.id.content_frame, LogInFragment()).commit()
+            R.id.nav_job_saved -> {
+                fragmentManager.beginTransaction().replace(R.id.content_frame, JobSavedFragment()).commit()
             }
             R.id.nav_message -> {
                 fragmentManager.beginTransaction().replace(R.id.content_frame,MessageFragment()).commit()
@@ -128,14 +128,14 @@ class MainActivity : AppCompatActivity() {
     //Testing
 
     private fun loadDatabase(){
-        val jobID = dbManager().pushJob()
+        val jobID = DbManager().pushJob()
 
         val startTime = "2018-05-01 0800"
         val endTime = "2018-05-01 1630"
 
         val job = Job(jobID,"test123","ABC Sample Job",startTime,endTime,100.00F, discription = "Test job want nice workers!")
 
-        val status = dbManager().updateJob(job)
+        val status = DbManager().updateJob(job)
     }
 
     public fun onNavigationItemSelected(MenuItem item)
