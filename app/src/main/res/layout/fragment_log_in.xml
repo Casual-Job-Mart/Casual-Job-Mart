@@ -3,11 +3,41 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="140dp"
-        android:layout_height="118dp"
+        android:id="@+id/textView"
+        android:layout_width="221dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="174dp"
-        android:text="Log in" />
+        android:layout_marginTop="128dp"
+        android:text="Sign In" />
+
+    <EditText
+        android:id="@+id/fragmentSignInFieldEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="163dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/fragmentLogInSignInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="51dp"
+        android:layout_marginEnd="56dp"
+        android:text="Sign In" />
+
+    <Button
+        android:id="@+id/fragmentLogInCancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/fragmentLogInSignInButton"
+        android:layout_marginStart="56dp"
+        android:text="Cancel" />
 </RelativeLayout>
