@@ -1,19 +1,18 @@
 package com.company.casual_job_mart.casualJobMart
 
 
+import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.TextView
+import android.widget.Button
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import kotlinx.android.synthetic.main.nav_header_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -48,6 +47,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //            usernameTextView = findViewById(R.id.navHeaderMainUsernameTextView)
 //            usernameTextView.text = "You hadn't login yet"
         }
+
+        val signInButton:Button = findViewById(R.id.mainActivitySignInButton)
+        signInButton.setOnClickListener({
+            val intent = Intent(this, LogInActivity::class.java)
+            startActivity(intent)
+        })
     }
 
     override fun onBackPressed() {
