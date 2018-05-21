@@ -39,7 +39,8 @@
         android:drawableLeft="@drawable/ic_search_black_24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:imeOptions="actionSearch" />
 
     <TextView
         android:id="@+id/textViewPlace1"
@@ -71,7 +72,8 @@
         android:drawableLeft="@drawable/ic_baseline_place_24px"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:imeOptions="actionSearch" />
 
     <ListView
         android:id="@+id/listViewJobList"

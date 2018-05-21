@@ -1,16 +1,19 @@
 package com.company.casual_job_mart.casualJobMart
 
+import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.Fragment
+import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.ListView
-import android.widget.SearchView
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
+import android.widget.*
 import com.google.firebase.database.*
 
 class SearchJobFragment : Fragment() {
@@ -37,7 +40,9 @@ class SearchJobFragment : Fragment() {
         loadData()
 
         editTextKeyword.addTextChangedListener(object : TextWatcher{
-            override fun afterTextChanged(p0: Editable?) {}
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
@@ -63,9 +68,25 @@ class SearchJobFragment : Fragment() {
 
                 })
             }
-
         })
 
+        editTextKeyword.setOnEditorActionListener { _, p1, _ ->
+            var handled = false
+            if(p1==EditorInfo.IME_ACTION_SEARCH){
+                hideKeyboard()
+                handled = true
+            }
+            handled
+        }
+
+        editTextPlace.setOnEditorActionListener { _, p1, _ ->
+            var handled = false
+            if(p1==EditorInfo.IME_ACTION_SEARCH){
+                hideKeyboard()
+                handled = true
+            }
+            handled
+        }
         //val keyWord = editTextKeyword.text.toString()
         //val place = editTextPlace.text.toString()
 
@@ -94,5 +115,19 @@ class SearchJobFragment : Fragment() {
             }
 
         });
+    }
+
+    fun Fragment.hideKeyboard() {
+        activity.hideKeyboard(view)
+    }
+/*
+    fun Activity.hideKeyboard() {
+        hideKeyboard(if (currentFocus == null) View(this) else currentFocus)
+    }
+*/
+    @SuppressLint("ServiceCast")
+    fun Context.hideKeyboard(view: View) {
+        val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
