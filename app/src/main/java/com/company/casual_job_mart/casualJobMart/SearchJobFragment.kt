@@ -33,16 +33,13 @@ class SearchJobFragment : Fragment() {
         listView = myView.findViewById(R.id.listViewJobList)
 
         editTextKeyword = myView.findViewById(R.id.editTextKeywords)
-        editTextPlace = myView.findViewById(R.id.editTextPlace)
 
         jobs = FirebaseDatabase.getInstance().getReference("jobs")
 
         loadData()
 
         editTextKeyword.addTextChangedListener(object : TextWatcher{
-            override fun afterTextChanged(p0: Editable?) {
-
-            }
+            override fun afterTextChanged(p0: Editable?) {}
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
@@ -79,14 +76,6 @@ class SearchJobFragment : Fragment() {
             handled
         }
 
-        editTextPlace.setOnEditorActionListener { _, p1, _ ->
-            var handled = false
-            if(p1==EditorInfo.IME_ACTION_SEARCH){
-                hideKeyboard()
-                handled = true
-            }
-            handled
-        }
         //val keyWord = editTextKeyword.text.toString()
         //val place = editTextPlace.text.toString()
 

@@ -56,11 +56,14 @@ class TestFragment : Fragment() {
     }
 
     fun testPushJob(){
-        val jobID = DbManager().pushJob()
+        var jobID = DbManager().pushJob()
         val startTime = "2018-05-01 0800"
         val endTime = "2018-05-01 1630"
-        val job = Job(jobID,"test123","abc Sample Job",startTime,endTime,100.00F, discription = "Test job want nice workers!")
+        val job = Job(jobID,"test123","Maintenance", Location("1111, Test Ave NW","Vancouver","BC","Canada","x1x1x1"),Duration(),100.00F, discription = "Test job want nice workers!")
         DbManager().updateJob(job)
+        var jobID2 = DbManager().pushJob()
+        val job2 = Job(jobID2,"test456","sales associate", Location("1000, 1St Street","Calgary","AB","Canada","T6H0B2"),Duration(),80.00F, discription = "Test job 2 want nice workers!")
+        DbManager().updateJob(job2)
     }
 
 
