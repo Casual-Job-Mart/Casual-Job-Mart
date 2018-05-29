@@ -1,6 +1,7 @@
 package com.company.casual_job_mart.casualJobMart
 
 import android.app.Fragment
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,7 +27,6 @@ class LogInActivityMainPageFragment : Fragment() {
         val myView = inflater!!.inflate(R.layout.fragment_log_in_acticity_main_page,container,false)
 
         val nextButton:Button = myView.findViewById(R.id.LogInActivityMainPageFragmentNextButton)
-
         nextButton.setOnClickListener ({
 
             val userInputEditText:EditText = myView.findViewById(R.id.LogInActiviFragmentVertificationCodeEditText)
@@ -34,11 +34,21 @@ class LogInActivityMainPageFragment : Fragment() {
 
             if(android.util.Patterns.PHONE.matcher(userInput).matches() && userInput.length > 6 && userInput.length < 13){
                 // Go to Phone Log In
-                fragmentManager.beginTransaction().replace(R.id.LogInActivityContent, LogInActivityPhoneLogInFragment()).commit()
+                var bundle = Bundle()
+                bundle.putString("phoneNumber", userInput.toString())
+                var newFragment = LogInActivityPhoneLogInFragment()
+                newFragment.arguments = bundle
+
+                fragmentManager.beginTransaction().replace(R.id.LogInActivityContent, newFragment).commit()
             }
             else if (android.util.Patterns.EMAIL_ADDRESS.matcher(userInput).matches()){
                 // Go to Email Log In
-                fragmentManager.beginTransaction().replace(R.id.LogInActivityContent, LogInActivityEmailLogInFragment()).commit()
+                var bundle = Bundle()
+                bundle.putString("emailAddress", userInput.toString())
+                var newFragment = LogInActivityEmailLogInFragment()
+                newFragment.arguments = bundle
+
+                fragmentManager.beginTransaction().replace(R.id.LogInActivityContent, newFragment).commit()
             }
             else{
                 Toast.makeText(activity, "You did not enter a valid phone number of email address", Toast.LENGTH_LONG).show()
@@ -47,4 +57,5 @@ class LogInActivityMainPageFragment : Fragment() {
 
         return myView
     }
+
 }

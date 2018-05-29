@@ -27,7 +27,7 @@
         android:textSize="12sp" />
 
     <EditText
-        android:id="@+id/LogInActivityEmailLogInFragmentPasswordEditText"
+        android:id="@+id/LogInActivityEmailLogInFragmentEmailEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="10dp"
@@ -37,10 +37,10 @@
         android:layout_marginTop="177dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="text" />
 
     <EditText
-        android:id="@+id/LogInActivityEmailLogInFragmentRetypePasswordEditText"
+        android:id="@+id/LogInActivityEmailLogInFragmentPasswordEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="10dp"
@@ -64,13 +64,13 @@
         android:text="Next" />
 
     <Button
-        android:id="@+id/LogInActivityEmailLogInFragmentBackButton"
+        android:id="@+id/LogInActivityEmailLogInFragmentRegisterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/LogInActivityEmailLogInFragmentNextButton"
         android:layout_marginStart="30dp"
-        android:text="Back" />
+        android:text="Register" />
 
 
 

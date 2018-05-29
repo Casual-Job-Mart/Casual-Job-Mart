@@ -29,7 +29,8 @@ class LogInActivityPhoneLogInFragment : Fragment() {
     var mVertification: String? = null
     var mResendToken:PhoneAuthProvider.ForceResendingToken? = null
 
-    var TAG = "VERIFICATIONS"
+    var TAG = "PHONE_VERIFICATIONS"
+    lateinit var phoneNumber: String
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -64,7 +65,6 @@ class LogInActivityPhoneLogInFragment : Fragment() {
         // Inflate the layout for this fragment
         var bundle:Bundle = arguments
 
-        var phoneNumber = "999"
         if(bundle != null){
             phoneNumber = bundle.getString("phoneNumber")
             beginVertification(phoneNumber)

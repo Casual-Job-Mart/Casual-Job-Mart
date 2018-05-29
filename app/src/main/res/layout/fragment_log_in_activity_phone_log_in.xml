@@ -26,7 +26,7 @@
         android:textAlignment="center"
         android:textSize="12sp" />
 
-    <EditText
+    <TextView
         android:id="@+id/LogInActivityPhoneLogInFragmentVertificationCodeEditText"
         android:layout_width="match_parent"
         android:layout_height="66dp"
@@ -34,8 +34,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="185dp"
         android:ems="10"
-        android:hint="Vertification Code"
-        android:inputType="number" />
+        android:hint="Vertification Code"/>
+        <!--android:inputType="number" />-->
 
     <Button
         android:id="@+id/LogInActivityPhoneLogInFragmentNextButton"
