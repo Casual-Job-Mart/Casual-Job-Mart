@@ -2,10 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_search_job"
     android:layout_width="match_parent" android:layout_height="match_parent">
-
-
-
 
     <TextView
         android:id="@+id/textViewKeyword1"
@@ -32,53 +30,36 @@
 
     <EditText
         android:id="@+id/editTextKeywords"
-        android:layout_width="340dp"
+        android:layout_width="312dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewKeyword1"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
         android:drawableLeft="@drawable/ic_search_black_24dp"
         android:ems="10"
+        android:imeOptions="actionSearch"
         android:inputType="textPersonName"
         android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/textViewPlace1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewKeyword1"
-        android:layout_below="@+id/editTextKeywords"
-        android:fontFamily="serif"
-        android:text="where "
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewPlace2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textViewPlace1"
-        android:layout_toEndOf="@+id/textViewPlace1"
-        android:text="city or province"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/editTextPlace"
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewPlace1"
-        android:layout_centerHorizontal="true"
-        android:drawableLeft="@drawable/ic_baseline_place_24px"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="18sp" />
 
     <ListView
         android:id="@+id/listViewJobList"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextPlace"
+        android:layout_below="@+id/editTextKeywords"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp" />
+
+    <ImageView
+        android:id="@+id/imageViewFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="67dp"
+        app:srcCompat="@drawable/ic_filter_outline"
+        tools:ignore="VectorDrawableCompat" />
+
 
 </RelativeLayout>
